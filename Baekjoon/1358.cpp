@@ -4,14 +4,14 @@ using namespace std;
 
 int main()
 {
-	int w, h, x1, y1, x2, y2, r, p, x, y, dx, dy, cnt;
+	int w, h, x1, y1, x2, y2, r, p, x, y, dx, dy, cnt=0;
 	
 	cin >> w >> h >> x >> y >> p;
 	
 	r = h/2;
 	x1 = x;
-	y1 = y+r;
-	x2 = x1 + w;
+	y1 = y + r;
+	x2 = x + w;
 	y2 = y1;
 	
 	while(p--){
