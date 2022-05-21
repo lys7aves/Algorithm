@@ -25,7 +25,7 @@ bool check_swap(int x, int y)
 
 int main()
 {
-	int t, i, j, x;
+	int t, i, j, x, y;
 	
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL); cout.tie(NULL);
@@ -61,8 +61,25 @@ int main()
 			j = *s.rbegin();
 		}
 		if(s.size() == 1){
-			i = *s.begin() - 1;
-			j = *s.begin();
+			x = *s.begin();
+			s.clear();
+			for(i=0; i<n; i++){
+				for(j=x; j<m && arr[i][j]==arr[i][x]; j++);
+				
+				s.insert(j);
+			}
+			
+			y = *s.begin()-1;
+			
+			s.clear();
+			for(i=0; i<n; i++){
+				for(j=x-1; j>=0 && arr[i][j]==arr[i][x-1]; j--);
+				
+				s.insert(j);
+			}
+			
+			i = *s.rbegin()+1;
+			j = y;
 		}
 		
 		if(check_swap(i, j)) cout << i+1 << ' ' << j+1 << '\n';
