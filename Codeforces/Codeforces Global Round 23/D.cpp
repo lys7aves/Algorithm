@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int s[MAXN+10], dp[MAXN+10], diff[MAXN+10];
+long long s[MAXN+10], dp[MAXN+10], diff[MAXN+10];
 vector<int> child[MAXN+10];
 
 void dfs(int v, int k)
