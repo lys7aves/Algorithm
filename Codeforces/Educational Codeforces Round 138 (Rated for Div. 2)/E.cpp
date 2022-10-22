@@ -38,6 +38,9 @@ bool check(int x, int y, int z){
 int main()
 {
     int t, i, j, x, y, x_, y_, z, ans;
+
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
     
     cin >> t;
     while(t--){
