@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include <algorithm>
 
-bool chk[12], p[11], q[11];
+bool chk[12];
+int p[11], q[11];
 
 using namespace std;
 
@@ -16,10 +17,10 @@ int main()
 
     for(i=0; i<11; i++){
         do{
-            p[i] = rand()%11+1;
+            p[i] = (rand()%11)+1;
         }while(chk[p[i]]);
 
-        chk[p[i]] = true;
+        chk[p[i]] = true; 
     }
 
     while(true){
@@ -43,7 +44,6 @@ int main()
         for(i=0; i<11; i++){
             sum += abs(p[i]-q[i]);
         }
-
         printf("현재 차이의 합은 %d입니다.\n", sum);
     }
 
