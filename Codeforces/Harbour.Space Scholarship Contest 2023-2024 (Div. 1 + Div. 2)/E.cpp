@@ -12,9 +12,10 @@ long long power(long long x, int y)
 {
     if(y == 0) return 1LL;
 
+    x %= MAX;
     long long res = power(x, y/2);
     res = (res * res) % MAX;
-    if(y%2 == 1) res = (res * x) % MAX;
+    if(y%2 == 1) res = (res * (x%MAX)) % MAX;
 
     return res;
 }
